@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Rang O'zgartirgich</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 20%;
+            font-family: sans-serif;
+            transition: background-color 0.5s ease; /* Rang silliq o'zgarishi uchun */
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #333;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        button:hover { background-color: #555; }
+    </style>
+</head>
+<body>
+    <h2>Orqa fon rangini o'zgartirish o'yini</h2>
+    <button onclick="changeColor()">Rangni o'zgartirish</button>
+
+    <script>
+        function changeColor() {
+            // Hex formatidagi tasodifiy rang yaratish
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
